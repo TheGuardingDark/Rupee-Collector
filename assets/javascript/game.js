@@ -5,7 +5,7 @@ $(document).ready(function() {
 var counter = 0;
 var wins = 0;
 var losses = 0;
-var crystalOptions = ["assets/images/greenRupee.png", "assets/images/blueRupeeSm.png", "assets/images/goldRupee.png", "assets/images/redRupee.png"];
+var crystalOptions = ["assets/images/greenRupee.png", "assets/images/blueRupeeSm.png", "assets/images/goldRupee.png", "assets/images/redRupee.png", "assets/images/purpleRupee.png", "assets/images/whiteRupee.png"];
 
 
 $("#targetScore").text(targetScore);
@@ -13,21 +13,27 @@ $("#playerScore").text(counter);
 $("#wins").text(wins);
 $("#losses").text(losses);
 
+var random = function(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+};
+
 
 var start = function() {
 
     for (var i =0; i < 4; i++) {
 
-    var crystalNum = Math.floor((Math.random() * 12) + 1);
+    var crystalNum = random(1,12);
     var imgCrystal = $("<img>");
     imgCrystal.addClass("crystal-image");
-    imgCrystal.attr("src", crystalOptions[i]);
+    var randomPic = Math.floor(Math.random()*crystalOptions.length) + 0;
+    // var randomPic = random(0,crystalOptions.length);
+    imgCrystal.attr("src", crystalOptions[randomPic]);
     imgCrystal.attr("data-crystalValue", crystalNum);
     $("#crystal").append(imgCrystal);
     
     }
 
-    var targetScore = Math.floor((Math.random() * 120) + 19);
+    var targetScore = random(19,120);
     $("#targetScore").text(targetScore);
 
 
