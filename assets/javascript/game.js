@@ -5,7 +5,7 @@ $(document).ready(function() {
 var counter = 0;
 var wins = 0;
 var losses = 0;
-// var crystalOptions = []
+var crystalOptions = ["assets/images/greenRupee.png", "assets/images/blueRupeeSm.png", "assets/images/goldRupee.png", "assets/images/redRupee.png"];
 
 
 $("#targetScore").text(targetScore);
@@ -21,7 +21,7 @@ var start = function() {
     var crystalNum = Math.floor((Math.random() * 12) + 1);
     var imgCrystal = $("<img>");
     imgCrystal.addClass("crystal-image");
-    imgCrystal.attr("src", "assets/images/greenRupee.png");
+    imgCrystal.attr("src", crystalOptions[i]);
     imgCrystal.attr("data-crystalValue", crystalNum);
     $("#crystal").append(imgCrystal);
     
