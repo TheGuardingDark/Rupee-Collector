@@ -1,4 +1,30 @@
 
-/* img { */
-  /* max-width: 25%; */
-/* } */
+
+
+.cave {
+  top: 91px;
+  left: 82px;
+}
+
+
+
+body {
+  background: url("../images/sky.png");
+}
+
+#leftScroll, #rightScroll {
+  width: 150%;
+  min-height: 100%;
+}
+
+#leftScroll {
+  margin-left: -28%; 
+}
+
+#rightScroll {
+  margin-left: -25%;
+}
+
+.right {
+  left: 10px;
+}

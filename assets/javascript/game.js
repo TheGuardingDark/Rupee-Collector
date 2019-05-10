@@ -29,7 +29,7 @@ function shuffle(array) {
     }
     return array
 
-}; console.log(shuffle(crystalOptions));
+}; 
 
 
 function start() {
@@ -39,8 +39,6 @@ function start() {
     var crystalNum = random(1,12);
     var imgCrystal = $("<img>");
     imgCrystal.addClass("crystal-image");
-    // var randomPic = Math.floor(Math.random()*crystalOptions.length) + 0;
-    // var randomPic = crystalOptions[i];
     imgCrystal.attr("src", crystalOptions[i]);
     imgCrystal.attr("data-crystalValue", crystalNum);
     $("#crystal").append(imgCrystal);

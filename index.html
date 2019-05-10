@@ -25,26 +25,29 @@
                   </div>
         <div class="container flex-grow-1">
             <div class="row">
-                <div class="card bg-dark text-white col-md-4">
-                    <div class="row">
-                        <h1>Target Score: <span id="targetScore"></span></h1>
-                    </div>
-                    <div class="row">
-                        <h1>Your Score: <span id="playerScore"></span></h1>
+                <div class="card-transparent text-white col-md">
+                    <img src="assets/images/scrollLeft.png" class="card-img" id="leftScroll" alt="left scroll">
+                    <div class="card-img-overlay left">
+                        <div class="row">
+                            <h1>Target Score: <span id="targetScore"></span></h1>
+                        </div>
+                        <div class="row">
+                            <h1>Your Score: <span id="playerScore"></span></h1>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-9">
                     <div class="row">
                         <p></p>
                     </div>
                     
                     <div class="row">
-                        <div class="col-md">
-                            <span id="crystal"></span>
-                            <!-- <span id="crystal"></span> -->
-                            <!-- <span id="crystal"></span> -->
-                            <!-- <span id="crystal"></span> -->
+                        <div class="col-md card-transparent" >
+                            <img src="assets/images/cave.png" class="card-img" alt="cave background">
+                                <div class="card-img-overlay cave">
+                                    <span id="crystal"></span>
+                                </div>
                         </div>
                     </div>
 
@@ -53,15 +56,17 @@
                     </div>
                 </div>
 
-                <div class="card bg-dark text-white col-md-4">
-                    <div class="row">
-                        <h1>Wins: <span id="wins"></span></h1>
-                    </div>
+                <div class="card-transparent text-white col-md">
+                        <img src="assets/images/scrollRight.png" class="card-img" id="rightScroll" alt="right scroll">
+                            <div class="card-img-overlay right">  
+                                <div class="row">
+                                    <h1>Wins: <span id="wins"></span></h1>
+                                </div>
 
-                    <div class="row">
-                        <h1>Losses: <span id="losses"></span></h1>
-                    </div>
-
+                                <div class="row">
+                                    <h1>Losses: <span id="losses"></span></h1>
+                                </div>
+                            </div>
                 </div>
             </div>
         </div>
