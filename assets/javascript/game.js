@@ -13,21 +13,35 @@ $("#playerScore").text(counter);
 $("#wins").text(wins);
 $("#losses").text(losses);
 
-var random = function(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) ) + min;
+function random(min, max) {
+    return Math.floor(Math.random() * (max - min ) ) + min;
 };
 
+function shuffle(array) {
+    var i = 0;
+    var j = 0;
+    var temp = null;
+    for (i = array.length - 1; i > 0; i-= 1) {
+        j = Math.floor(Math.random() * (i + 1));
+        temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array
 
-var start = function() {
+}; console.log(shuffle(crystalOptions));
+
+
+function start() {
 
     for (var i =0; i < 4; i++) {
 
     var crystalNum = random(1,12);
     var imgCrystal = $("<img>");
     imgCrystal.addClass("crystal-image");
-    var randomPic = Math.floor(Math.random()*crystalOptions.length) + 0;
-    // var randomPic = random(0,crystalOptions.length);
-    imgCrystal.attr("src", crystalOptions[randomPic]);
+    // var randomPic = Math.floor(Math.random()*crystalOptions.length) + 0;
+    // var randomPic = crystalOptions[i];
+    imgCrystal.attr("src", crystalOptions[i]);
     imgCrystal.attr("data-crystalValue", crystalNum);
     $("#crystal").append(imgCrystal);
     
@@ -67,9 +81,10 @@ var start = function() {
 
 };
 
- var reset = function() {
+  function reset() {
      $("#targetScore, #playerScore, #crystal").empty();
      counter = 0;
+     shuffle(crystalOptions);
     start();
 
  };
