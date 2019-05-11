@@ -1,9 +1,48 @@
+.legend {
+  max-height: 600px;
+}
 
 
+.instructions {
+  font-weight: bolder;
+  font-size: 20px;
+  line-height: 15px;
+  color: #ecfdea;
+}
+
+#text {
+margin-top: -65px;
+}
+
+h6 {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+h1 {
+  padding-left: -5px;
+}
+
+.loss, .player {
+  margin-top: 25px;
+}
+
+.win {
+  margin-left: -3px;
+}
+
+.card-img-overlay {
+  right: 20px;
+  top: 113px;
+}
+
+.card-transparent {
+  text-align: center;
+}
 
 .cave {
   top: 91px;
-  left: 82px;
+  left: 13px;
 }
 
 
@@ -27,4 +66,13 @@ body {
 
 .right {
   left: 10px;
+}
+
+.ocean {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+footer {
+  background: url(../images/waves.png) repeat-x;
 }

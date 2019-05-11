@@ -13,25 +13,30 @@
 
 </head>
     <body>
-
-            <div class="jumbotron jumbotron-fluid">
-                    <div class="container">
-                      <h1 class="display-4"><s>Rupee</s> Crystal Collector</h1>
-                      <p>You will be given a random target number at the start of each game.</p>
-                      <p> Your goal is to reach that number without exceeding it.</p>
-                      <p> In order to do this, you will be given four <s>rupees</s> crystals, each with a random value assigned to it.</p>
-                      <p> Your score will increase each time you click a <s>rupee</s> crystal, but you won't know by how much until you click!</p>
-                    </div>
-                  </div>
         <div class="container flex-grow-1">
+                    <div class="row justify-content-center">
+                        <div class="card-transparent text-white">
+                            <img src="assets/images/banner.png" class="card-img legend" alt="zeldascroll" >
+                            <div class="card-img-overlay instructions">
+                                <div id="text">
+                                <p>OHHHHH! A Customer! I have an unique opportunity just for you!</p>
+                                <p>I will give you a target score at the start of each round.</p>
+                                <p>Each of the four rupees in my shop is worth a secret number of points.</p>
+                                <p>All you have to do is match the target number by clicking on the rupees!</p>
+                                    <h6>(better not go over the target though)</h6>
+                                <p>What? I didn't say anything. Sounds easy, right? I thought so. Begin!</p>
+                                </div>
+                            </div>
+                        </div>
+                  </div>
             <div class="row">
-                <div class="card-transparent text-white col-md">
+                <div class="card-transparent text-black col-md">
                     <img src="assets/images/scrollLeft.png" class="card-img" id="leftScroll" alt="left scroll">
                     <div class="card-img-overlay left">
                         <div class="row">
                             <h1>Target Score: <span id="targetScore"></span></h1>
                         </div>
-                        <div class="row">
+                        <div class="row player">
                             <h1>Your Score: <span id="playerScore"></span></h1>
                         </div>
                     </div>
@@ -44,7 +49,7 @@
                     
                     <div class="row">
                         <div class="col-md card-transparent" >
-                            <img src="assets/images/cave.png" class="card-img" alt="cave background">
+                            <img src="assets/images/cave2.jpg" class="card-img" alt="cave background">
                                 <div class="card-img-overlay cave">
                                     <span id="crystal"></span>
                                 </div>
@@ -56,19 +61,23 @@
                     </div>
                 </div>
 
-                <div class="card-transparent text-white col-md">
+                <div class="card-transparent text-black col-md">
                         <img src="assets/images/scrollRight.png" class="card-img" id="rightScroll" alt="right scroll">
                             <div class="card-img-overlay right">  
-                                <div class="row">
+                                <div class="row win">
                                     <h1>Wins: <span id="wins"></span></h1>
                                 </div>
 
-                                <div class="row">
+                                <div class="row loss">
                                     <h1>Losses: <span id="losses"></span></h1>
                                 </div>
                             </div>
                 </div>
+               </div>
+            <div class="row ocean">
+                <img src="assets/images/boat.png" class="boat" alt="boat">
             </div>
+
         </div>
 
     <div class="footer"></div>
