@@ -34,43 +34,53 @@ function shuffle(array) {
 
 function start() {
 
+    $("#imgHolder").html("");
+    $(".backCave").show();
+    $("#crystal").show();
+
     for (var i =0; i < 4; i++) {
 
     var crystalNum = random(1,12);
     var imgCrystal = $("<img>");
-    imgCrystal.addClass("crystal-image");
+    imgCrystal.addClass("crystals");
     imgCrystal.attr("src", crystalOptions[i]);
     imgCrystal.attr("data-crystalValue", crystalNum);
     $("#crystal").append(imgCrystal);
     
-    }
+    };
 
     var targetScore = random(19,120);
     $("#targetScore").text(targetScore);
 
 
-    $(".crystal-image").on("click", function() {
+    $(".crystals").on("click", function() {
 
     var crystalValue = ($(this).attr("data-crystalValue"));
     crystalValue = parseInt(crystalValue);
     counter += crystalValue;
-    console.log(crystalValue);
+    // console.log(crystalValue);
     $("#playerScore").text(counter);
     
 
     if (counter === targetScore) {
         wins++;
         $("#wins").text(wins);
-        alert("Game Over");
-        reset();
+        $(".backCave").hide();
+        $("#crystal").hide();
+
+        $("#imgHolder").html("<img src='assets/images/youWon.png' />");
+        setTimeout(reset, 2000);
+        
 
     }
 
     else if (counter > targetScore) {
         losses++;
         $("#losses").text(losses);
-        alert("Game Over");
-        reset();
+        $(".backCave").hide();
+        $("#crystal").hide();
+        $("#imgHolder").html("<img src='assets/images/youLose.png' />");
+        setTimeout(reset, 2000);
 
     } 
     

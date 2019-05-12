@@ -49,6 +49,7 @@ h1 {
 
 body {
   background: url("../images/sky.png");
+  max-height: 100vh;
 }
 
 #leftScroll, #rightScroll {
@@ -68,11 +69,15 @@ body {
   left: 10px;
 }
 
+
 .ocean {
   margin-top: 0;
   padding-top: 0;
 }
 
-footer {
-  background: url(../images/waves.png) repeat-x;
+#waves {
+  max-width: 100vw;
+  padding: 0;
+  top: 836px;
+
 }
