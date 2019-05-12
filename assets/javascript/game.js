@@ -6,7 +6,7 @@ var counter = 0;
 var wins = 0;
 var losses = 0;
 var crystalOptions = ["assets/images/greenRupee.png", "assets/images/blueRupeeSm.png", "assets/images/goldRupee.png", "assets/images/redRupee.png", "assets/images/purpleRupee.png", "assets/images/whiteRupee.png"];
-
+var gameStarted = false;
 
 $("#targetScore").text(targetScore);
 $("#playerScore").text(counter);
@@ -31,6 +31,15 @@ function shuffle(array) {
 
 }; 
 
+function boatFloat () {
+    var boat = $(".boat");
+    boat.animate({left: "1500px"}, 30000);
+    boat.animate({opacity: "0"});
+    boat.animate({left: "-100px"});
+    boat.animate({opacity: "1"});
+
+};
+
 
 function start() {
 
@@ -38,6 +47,7 @@ function start() {
     $(".backCave").show();
     $("#crystal").show();
 
+    
     for (var i =0; i < 4; i++) {
 
     var crystalNum = random(1,12);
@@ -51,6 +61,8 @@ function start() {
 
     var targetScore = random(19,120);
     $("#targetScore").text(targetScore);
+
+    boatFloat();
 
 
     $(".crystals").on("click", function() {
