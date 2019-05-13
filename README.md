@@ -1,6 +1,10 @@
 # unit-4-game
-##Beedle's Rupee Collector
-###jquery/javascript
+## Beedle's Rupee Collector
+### jquery/javascript
+
+GAME FUNCTIONALITY
+==================
+
 
 Upon loading the game, players will be met with an instructional banner, background image of Beedle's cave, side scrolls documenting the target score, player score, wins, and losses, as well as four randomly generated rupees with a random secret value assigned to each.
 
