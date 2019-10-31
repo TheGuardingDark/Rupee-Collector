@@ -7,6 +7,8 @@ GAME FUNCTIONALITY
 
 ### Deployed Link: https://theguardingdark.github.io/Rupee-Collector/
 
+(Currently not mobile friendly)
+
 Upon loading the game, players will be met with an instructional banner, background image of Beedle's cave, side scrolls documenting the target score, player score, wins, and losses, as well as four randomly generated rupees with a random secret value assigned to each.
 
 As the player clicks on each rupee, its value is added to their score. They must try to match the target score without going over.
